@@ -1,0 +1,89 @@
+* {
+  font-family: MesloLGL Nerd Font;
+  font-size: 14px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
+  color: #ebdbb2;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 15px;
+  padding: 0px 15px;
+  margin: 5px;
+  background-color: #1b1b1b;
+  margin-left: 15px;
+}
+
+#workspaces button {
+  color: #282828;
+  border-radius: 15px;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: #7daea3;
+  border-radius: 15px;
+}
+
+#workspaces button:hover {
+  color: #7daea3;
+  border-radius: 15px;
+}
+
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio {
+  background-color: #1b1b1b;
+  padding: 0px 15px;
+  margin: 5px 0;
+}
+
+#clock {
+  color: #ebdbb2;
+  border-radius: 0px 15px 15px 0px;
+  margin-right: 15px;
+}
+
+#battery {
+  color: #a9b665;
+}
+
+#battery.charging {
+  color: #a9b665;
+}
+
+#battery.warning:not(.charging) {
+  color: #ea6962;
+}
+
+#backlight {
+  color: #d8a657;
+}
+
+#backlight, #battery {
+    border-radius: 0px;
+}
+
+#pulseaudio {
+  color: #ea6962;
+  border-radius: 15px 0px 0px 15px;
+  margin-left: 15px;
+}
+
+#custom-music {
+  color: #7daea3;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+#tray {
+  margin-right: 15px;
+  border-radius: 15px;
+}

@@ -1,0 +1,76 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/music"],
+    "modules-right": ["pulseaudio", "backlight", "battery", "clock", "tray"],
+    "hyprland/workspaces": {
+         "format": " {icon} ",
+         "format-icons": {
+             "default": "",
+         },
+         // "format-icons": {
+         //    "1": "一",
+         //    "2": "二",
+         //    "3": "三",
+         //    "4": "四",
+         //    "5": "五",
+         //    "6": "六",
+         //    "7": "七",
+         //    "8": "八",
+         //    "9": "九",
+         //    "10": "十"
+         //}
+
+     },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/music": {
+        "format": "  {}",
+        "escape": true,
+        "interval": 5,
+        "tooltip": false,
+        "exec": "playerctl metadata --format='{{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
+    },
+    "clock": {
+        "timezone": "Europe/Warsaw",
+        "format-alt": " {:%a %b %d %H:%M}",
+        "format": " {:%H:%M}"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-alt": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-alt": "{icon}",
+        "format-icons": [
+          "󰁻",
+          "󰁼",
+          "󰁾",
+          "󰂀",
+          "󰂂",
+          "󰁹"
+        ]
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-alt": "{icon}",
+        "format-icons": {
+            "default": ["", "", " "]
+        }
+    }
+}
